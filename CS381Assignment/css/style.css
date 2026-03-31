@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #0b5ed7;
+}
+
+a:hover {
+  color: #084298;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #ff9800;
+  outline-offset: 3px;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #0b3d91;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #e9f1ff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #d0e3ff;
+}
+
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  display: grid;
+  gap: 20px;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  margin-bottom: 12px;
+  color: #0b3d91;
+  font-size: 1.4rem;
+}
+
+section p,
+section li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section:first-of-type img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #dce8ff;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 15px;
+  background-color: #f0f4ff;
+  border-left: 5px solid #0b5ed7;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #0b3d91;
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  section:first-of-type {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 30px;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section:first-of-type,
+  section:nth-of-type(2) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  body {
+    font-size: 1.05rem;
+  }
+}
